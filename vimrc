@@ -1,5 +1,5 @@
-" Automatic reloading of .vimrc "
-autocmd! bufwritepost .vimrc source %
+" Automatic reloading of vimrc 
+autocmd! bufwritepost vimrc source %
 
 " set-up pathogen "
 " mkdir -p ~/.vim/autoload ~/.vim/bundle "
