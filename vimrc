@@ -112,6 +112,11 @@ set nofoldenable
 autocmd Filetype tex setl updatetime=1
 let g:livepreview_previewer = 'open -a Preview'
 
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+
 
 " save sudo file
 cmap w!! w !sudo tee > /dev/null %
